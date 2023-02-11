@@ -129,10 +129,17 @@
         <ol>
         <p>  1. Compete the fuzz test and conduct investigation and survey about WPS</p>
         
-        <p>  2. Base on ZAFL to carry out the fuzz test  </p>
+        <p>  2. Base on AFL to carry out the fuzz test  </p>
+          
+        <p>  3. Modify AFL++ and use named-pipe, qemu binfmt_misc, pidfd to make it scalable for large multi-process GUI programs</p>
+          
+         <p> 4.Update AFLSmart and integrate it with the lastest version of AFL++  </p> 
         </ol>
+    
         <br>
-        <h4><li>Java Program’s Vulnerability Mining and Intrusion Detection (JVD)  </li></h4>
+       
+        <br>
+        <h4><li>Java Program’s Vulnerability Mining and Intrusion Detection with static analysis(JVD)  </li></h4>
         <p class="w3-justify">
           Beijing, Feb. 2021 - Jul. 2022 
         </p>
@@ -140,7 +147,7 @@
           Researcher, supervised by <strong>Prof. Weiping Wen</strong> from Peking University
         </p> 
 
-        <p><b>Description</b>:<br> The project aimed at developing a set of vulnerability scanner for Huawei, to detect vulnerabilities like Deserialization, XSS, SQL Injection, and Null Pointer Call in the system. We also adopted RASP to block malicious inputs. </p>
+        <p><b>Description</b>:<br> The static analysis project aimed at developing a set of vulnerability scanner for Huawei, to detect vulnerabilities like Deserialization, XSS, SQL Injection, and Null Pointer Call in the system. We also adopted RASP to block malicious inputs. </p>
         
         <b>Responsibilities</b>: <br>
         <ol>
@@ -156,6 +163,31 @@
          
             <p>3. Locating vulnerability position correctly rate >85%  </p>
         </ol>
+    
+    
+        <h4><li>UVD: scalable UAF detector based on on-demand static analysis  </li></h4>
+        <p class="w3-justify">
+          Beijing, December. 2022 - Present
+        </p>
+        <p class="w3-justify" color = "6F7173">
+          Researcher, supervised by <strong>Prof. Dahai Jin</strong> from BUPT
+        </p> 
+
+        <p><b>Description</b>Based on SVF, I designed a on-demand pointer analysis system to detect UAF in C program </p>
+        
+        <b>Detail</b>: <br>
+        <ol>
+        <p>1. The program is consisted of 4 parts </p>
+          <ol>
+            <p>a. Pre-analysis: detect the "free" statement in CFG and delete loops<br>  </p>
+            <p>b. Backward-analysis: From each "free", search backwardly,realize backward Andersen pointer analysis and  solve simple path like ¬𝛼 ∨𝛼 <br>  </p>
+            <p>c. Forward-analysis: From each "free", search forwardly with the point set got above, detect if there are any usage of freed variables <br>  </p>
+            <p>d. Sanitizer: Use BDD or SMT solver, delete infeasible paths for the taint chain reported above <br>  </p>
+          </ol>
+        <p>2. More detail can be get from <a href="https://github.com/ShangzhiXu/ShangzhiXu.github.io/blob/main/%E5%BE%90%E5%B0%9A%E5%BF%97%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86.pdf">this</a> pdf </p>
+        </ol>
+          
+     
 
   </div>
   
